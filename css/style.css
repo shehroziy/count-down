@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+:root {
+  --secondary-font: "Berkshire Swash", cursive;
+  --dark-color: #183153;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-family: var(--secondary-font);
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--dark-color);
+}
+
+.container .title {
+  font-size: 4rem;
+  position: absolute;
+  top: -150px;
+  color: orangered;
+}
+
+.container div {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.25s linear;
+  box-shadow: 0 0 24px 3px rgba(0, 0, 0, 0.1);
+}
+
+.container div:hover {
+  box-shadow: 0 0 39px 12px rgba(37, 37, 37, 0.1);
+  background-color: var(--dark-color);
+  color: #ffffff;
+}
+
+.container p {
+  position: absolute;
+  top: 10px;
+  font-size: 1.4rem;
+  color: orangered;
+}
+
+.container h1 {
+  font-size: 6rem;
+}
+
+.fa-snowflake {
+	color: rgb(255, 0, 0);
+	position: absolute;
+	top: -20px;
+	animation: snow-anim linear forwards;
+  z-index: 99999;
+}
+
+@keyframes snow-anim {
+	to {
+		transform: translateY(105vh);
+	}
+}
